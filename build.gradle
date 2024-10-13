@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'com.course.project.varabei'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+publishing {
+    publications {
+        maven (MavenPublication) {
+            groupId = rootProject.getGroup()
+            artifactId = rootProject.getName()
+            version = rootProject.getVersion()
+
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            url = "file://${project.projectDir.toString()}/maven-repo/"
+        }
+    }
+}
