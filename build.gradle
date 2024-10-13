@@ -13,7 +13,7 @@ repositories {
 
 publishing {
     publications {
-        maven (MavenPublication) {
+        maven(MavenPublication) {
             groupId = rootProject.getGroup()
             artifactId = rootProject.getName()
             version = rootProject.getVersion()
