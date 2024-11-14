@@ -3,10 +3,11 @@
   <groupId>com.course.project.varabei</groupId>
   <artifactId>logging-starter</artifactId>
   <versioning>
-    <latest>1.0-SNAPSHOT</latest>
+    <latest>1.3-SNAPSHOT</latest>
     <versions>
       <version>1.0-SNAPSHOT</version>
+      <version>1.3-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20241013232426</lastUpdated>
+    <lastUpdated>20241114190049</lastUpdated>
   </versioning>
 </metadata>

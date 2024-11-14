@@ -1,7 +1,31 @@
 package com.course.project.varabei;
 
+import com.course.project.varabei.aspect.LogExecutionAspect;
+import com.course.project.varabei.webFilter.WebLoggingFilter;
+import com.course.project.varabei.webFilter.WebLoggingRequestBodyAdvice;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
+
+@AutoConfiguration
+@ConditionalOnProperty(prefix = "logging", value = "enabled", havingValue = "true", matchIfMissing = true)
 public class LoggingStarterAutoConfiguration {
-    public static void println(String message) {
-        System.out.println(message);
+
+    @Bean
+    @ConditionalOnProperty(prefix = "logging", value = "enabled-log-execution-time", havingValue = "true")
+    public LogExecutionAspect logExecutionAspect() {
+        return new LogExecutionAspect();
+    }
+
+    @Bean
+    @ConditionalOnProperty(prefix = "logging.web-logging", value = "enabled", havingValue = "true", matchIfMissing = true)
+    public WebLoggingFilter webLoggingFilter() {
+        return new WebLoggingFilter();
+    }
+
+    @Bean
+    @ConditionalOnProperty(prefix = "logging.web-logging", value = {"enabled", "log-body"}, havingValue = "true", matchIfMissing = true)
+    public WebLoggingRequestBodyAdvice webLoggingRequestBodyAdvice() {
+        return new WebLoggingRequestBodyAdvice();
     }
 }
