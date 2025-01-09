@@ -3,28 +3,28 @@
   <groupId>com.course.project.varabei</groupId>
   <artifactId>logging-starter</artifactId>
   <versioning>
-    <lastUpdated>20241114190049</lastUpdated>
+    <lastUpdated>20250109165840</lastUpdated>
     <snapshot>
-      <timestamp>20241114.190049</timestamp>
+      <timestamp>20250109.165840</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
-        <extension>module</extension>
-        <value>1.3-20241114.190049-1</value>
-        <updated>20241114190049</updated>
-      </snapshotVersion>
-      <snapshotVersion>
         <extension>jar</extension>
-        <value>1.3-20241114.190049-1</value>
-        <updated>20241114190049</updated>
+        <value>1.4-20250109.165840-1</value>
+        <updated>20250109165840</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.3-20241114.190049-1</value>
-        <updated>20241114190049</updated>
+        <value>1.4-20250109.165840-1</value>
+        <updated>20250109165840</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>module</extension>
+        <value>1.4-20250109.165840-1</value>
+        <updated>20250109165840</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
-  <version>1.3-SNAPSHOT</version>
+  <version>1.4-SNAPSHOT</version>
 </metadata>
